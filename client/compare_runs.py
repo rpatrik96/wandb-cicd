@@ -4,7 +4,7 @@ import wandb.apis.reports as wr
 assert os.getenv('WANDB_API_KEY'), 'You must set the WANDB_API_KEY environment variable'
 
 def get_baseline_run(entity, project, tag='baseline'):
-    "Get the baseline run from the project using tags"
+    "Get the baseline run from the project using the 'baseline' tag"
 
     api = wandb.Api()
     runs=api.runs(f'{entity}/{project}', {"tags": {"$in": [tag]}})
