@@ -1,5 +1,7 @@
 name: excercise-wandb
-on: issue_comment
+on: 
+  issue_comment:
+  workflow_dispatch:
 
 permissions:
   contents: read
